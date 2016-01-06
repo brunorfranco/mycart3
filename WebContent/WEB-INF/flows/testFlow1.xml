@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+		http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+	
+	<view-state id="testFlow1" view="account/testFlow1">
+		<transition on="testFlow1" to="testFlow2"/>
+	</view-state>
+	
+	<view-state id="testFlow2" view="account/testFlow2">
+		<transition on="testFlow2" to="testFlow3"/>
+	</view-state>
+	
+	<end-state id="testFlow3" view="externalRedirect:contextRelative:/home.do"/>
+	
+</flow>
